@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 import com.sid.customvalidation.Mycustomvalidator;
 
 public class Try {
-	@Mycustomvalidator
+	@Mycustomvalidator(Value="CM", message="Doesnt contain CM")
 	private String tryfname;
 	@Size(min=1, max=10, message="Last name Should be of length minimum 1 & max 10")
 	private String trylname;
