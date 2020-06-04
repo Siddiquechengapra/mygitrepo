@@ -2,6 +2,9 @@ package com.sid.myselfpackage;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student {
 	
 	public Student() {
@@ -27,7 +30,11 @@ public class Student {
 	private LinkedHashMap<String,String> countryOptions = new LinkedHashMap<String, String>();
 	
 	private String country;
+	@NotNull(message="Dont leave the field blank")
 	private String entefirstname;
+	
+	
+	@Size(min=5, max=10,message = "Is needed ")
 	private String entelastname;
 	private String entecourse;
 	private String[] entecourses;

@@ -7,11 +7,16 @@
 <title>Hello Myself
 </title>
 </head>
+<style>
+.error{color:red}
+</style>
 <Body bgcolor="pink"><h2></h2>
 	<form:form action="processform" modelAttribute="studentattri">
  				First name : <form:input path="entefirstname"/>
  	<br>
+ 	
  				Last name : <form:input path="entelastname"/>
+ 				<form:errors path="entelastname" cssClass="error" />
  	<br>
  
 				Select your country: <form:select path="country">

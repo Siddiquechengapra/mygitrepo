@@ -24,8 +24,10 @@
 		<property name="suffix" value=".jsp" />
 		
 	</bean>
-	
-
+	<bean id="messagesource"
+	   class="org.springframework.context.support.ResourceBundleMessageSource" >
+	<property name="basenames" value="resources/messages"/>
+    </bean>
 </beans>
 
 
