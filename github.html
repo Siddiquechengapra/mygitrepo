@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github things</title>
+</head>
+<body>
+    <h3>GITHUB Repo checking</h3>
+    <button id="button1">Click me for repos</button>
+    <div id="div1">Company name : 
+
+    </div>
+    
+
+    <script>
+        var btn1=document.getElementById("button1")
+        btn1.addEventListener("click",find)
+        var divv=document.getElementById("div1")
+        let tgh2=document.createElement("h3")
+        async function find(){
+            var url="https://api.github.com/users/siddiquechengapra"
+            var response =await fetch(url)
+            var result=await response.json()
+            console.log(result)
+            let tgh3=document.createElement("h3")
+            tgh3.textContent=result.company
+            let tgh4=document.createElement("h3")
+            tgh4.textContent=result.twitter_username
+            divv.appendChild(tgh3)
+            divv.appendChild(tgh4)
+        }
+
+    </script>
+</body>
+</html>
